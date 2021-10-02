@@ -1,3 +1,4 @@
+// create 2 classes
 class Student {
   constructor(name, email, community) {
     this.name = name;
@@ -13,6 +14,7 @@ class Bootcamp {
     this.students = students;
   }
 
+  /* create a method to check if the student is registred on the bootcamp or not; if they were registered, provide a message about it, if they were not registered, add them to the students array and output a message*/
   registerStudent(student) {
     const studentReg = this.students.filter((st) => st.email === student.email);
     if (studentReg.length) {
@@ -29,13 +31,17 @@ class Bootcamp {
   }
 }
 
+// test
 const st1 = new Student("Mark", "mark@gmail.com", "React");
 const st2 = new Student("Christina", "christina@gmail.com", "Java");
 const st3 = new Student("Dana", "dana@gmail.com", "JS");
 
 const bootcamp1 = new Bootcamp("React", "1");
+const bootcamp2 = new Bootcamp("React2", "2");
 
 bootcamp1.registerStudent(st1);
 bootcamp1.registerStudent(st2);
 bootcamp1.registerStudent(st3);
 bootcamp1.registerStudent(st1);
+
+bootcamp2.registerStudent(st1);
