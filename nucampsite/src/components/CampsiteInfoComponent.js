@@ -1,12 +1,5 @@
 import React, { Component } from "react";
-import {
-  Card,
-  CardImg,
-  CardImgOverlay,
-  CardText,
-  CardBody,
-  CardTitle,
-} from "reactstrap";
+import { Card, CardImg, CardText, CardBody, CardTitle } from "reactstrap";
 
 class CampsiteInfo extends Component {
   renderCampsite(campsite) {
@@ -57,9 +50,11 @@ class CampsiteInfo extends Component {
     return (
       <div>
         {this.props.campsite ? (
-          <div className="row">
-            {this.renderCampsite(this.props.campsite)}
-            {this.renderComments(this.props.campsite.comments)}
+          <div className="container">
+            <div className="row">
+              {this.renderCampsite(this.props.campsite)}
+              {this.renderComments(this.props.campsite.comments)}
+            </div>
           </div>
         ) : (
           <div></div>
