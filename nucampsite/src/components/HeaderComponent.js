@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import {
+  Nav,
   Navbar,
   NavbarBrand,
-  Nav,
   NavbarToggler,
   Collapse,
   NavItem,
@@ -26,6 +26,7 @@ class Header extends Component {
       isNavOpen: false,
       isModalOpen: false,
     };
+
     this.toggleNav = this.toggleNav.bind(this);
     this.toggleModal = this.toggleModal.bind(this);
     this.handleLogin = this.handleLogin.bind(this);
@@ -107,6 +108,7 @@ class Header extends Component {
             </Collapse>
           </div>
         </Navbar>
+
         <Modal isOpen={this.state.isModalOpen} toggle={this.toggleModal}>
           <ModalHeader toggle={this.toggleModal}>Login</ModalHeader>
           <ModalBody>
